@@ -1,0 +1,683 @@
+@-ms-viewport {
+  width: device-width;
+}
+
+/*reset*/
+
+* {
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+	font-size: 16px;
+}
+
+.nav-icon, .mobile-navbar {
+	display: none;
+}
+
+html, body {
+  	overflow-x: hidden;
+  	width: 100%;
+  	font-family: "Lato", sans-serif;
+  	font-size: 16px;
+}
+/*style the header */
+
+header {
+  height: 10vh;
+	background-color: #2E2630;
+	font-family: "Gugi", cursive;
+}
+
+header .nav {
+	display: flex;
+  flex-direction: row;
+  justify-content: flex-end;  	
+  flex-flow: nowrap;
+	align-items: center;
+  padding: 20px 50px 20px 0;
+	position: fixed;
+  z-index: 4;
+  background-color: #2E2630;
+	width: 100%;
+	opacity: .8;
+}
+
+.nav a {
+	padding: 0 40px 0 50px;
+	color: #FFFFFF;
+  text-decoration: none;
+  font-size: 1.5vw;
+	margin-top: -5px;
+}
+
+.nav a:hover {
+  	color: #FC2277;
+}
+
+
+/*stylw the welcome section*/
+
+/*add animation class*/
+
+
+.container .welcome-sec {
+	background-color: #212529;
+	color: #FFFFFF;
+	text-align: center;
+	height: 90vh;
+	position: relative;
+}
+
+.welcome-sec .welcome-part {
+	margin: 0 auto;
+ /*for animation*/
+}
+
+/*add animation for slider*/
+
+@keyframes sliding-forward {
+
+	from {transform: translateX(0%);}
+	to {transform: translateX(400%);}
+}
+
+@keyframes sliding-back {
+
+	from {transform: translateX(-400%)}
+	to {transform: translateX(0%)}
+}
+
+.forward {
+	animation: sliding-forward 2s ease-in-out;
+	transform: translateX(-400%);
+}
+
+.back {
+	animation: sliding-back 2s ease-in-out;
+	transform: translateX(0%);
+}
+
+
+/*add animation for slider*/
+
+
+.welcome-part .photo-div {
+  padding: 100px 0 30px 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.photo-div .photo {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+
+.welcome-part h1 {
+  font-size: 4vw;
+  font-weight: 700;
+  padding: 0 0 10px 0;
+  font-family: 'Merienda', cursive;
+}
+
+.welcome-part h1 span {
+  color: #A3395B;
+	font-size: 3vw;
+	font-family: 'Merienda', cursive;
+}
+
+.welcome-part p {
+	font-size: 2vw;
+	font-family: 'Buda', cursive;
+}
+
+.container .welcome-sec .about {
+  width: 500px;
+  text-align: center;
+	margin: -300px auto 0 auto;
+  font-family: 'Buda', cursive;
+}
+
+.welcome-sec .not-visible {
+	transform:  translateX(-400%);
+	font-family: 'Buda', cursive;
+}
+
+.container .welcome-sec .about h2 {
+  font-size: 3vw;
+  font-weight: 600;
+  color: #A3395B;
+  padding-bottom: 5%;
+  text-transform: capitalize;
+}
+
+.container .welcome-sec .about p {
+  font-weight: 400;
+	padding-bottom: 10%;
+	line-height: 20px;
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+.container .welcome-sec .about .social i {
+  padding: 1% 10% 0 5%;
+  font-size: 25px;
+  color: #A6A5A6;
+}
+
+.container .welcome-sec .about .social i:hover {
+  color: #A3395B;
+  cursor: pointer;
+}
+
+.container .welcome-sec .contain {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 750px;
+  top: 470px;
+}
+
+.container .welcome-sec .contain .circle {
+  display: block;
+  border-color: #FFFFFF;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
+
+.container .welcome-sec .contain .colored {
+  background-color: #A3395B;
+}
+
+.container .welcome-sec .contain .right {
+  margin-left: 10px;
+}
+
+/*style projects section*/
+
+.container .projects-sec {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 100px 0 70px 0;
+}
+
+.projects-sec .sec-title {
+  text-align: center;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.projects-sec .sec-title h2 {
+  padding-bottom: 5px;
+  border-bottom-color: #A3395B;
+  border-bottom-width: thick;
+  font-size: 30px;
+  border-bottom-style: solid;
+  font-family: "Gugi", cursive;
+  letter-spacing: 2px;
+  width: 230px;
+  margin: 0 auto;
+}
+
+.projects-sec .project-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.proj-contain {
+	display: none;
+  margin: 0 0 70px 0;
+  border-radius: 6px;
+  border-style: solid;
+  border-color: whitesmoke;
+  border-width: thin;
+  width: 45%;
+  height: 35%;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-1 {
+	display: block;
+}
+
+.project-2 {
+	display: block;
+}
+
+.proj-screenshot {
+  width: 100%;
+}
+
+.proj-screenshot:hover {
+  width: 120%;
+  transition: width 1s ease-in-out;
+}
+
+.project-title {
+  background-color: #273344;
+  z-index: 3;
+  opacity: .8;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 15px 0 0 30px;
+  width: 100%;
+  height: 40%;
+  font-family: 'Buda', cursive;
+}
+
+.project-title h6 {
+  display: inline-block;
+  font-size: 20px;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-family: 'Buda', cursive;
+}
+
+.project-title p {
+  padding: 5px 50px 10px 0;
+  color: #FFFFFF;
+  font-family: 'Buda', cursive;
+}
+.project-title .links {
+  display: flex;
+  margin-top: -15px;
+	flex-direction: row;
+	justify-content: space-between;
+	font-family: 'Buda', cursive;
+}
+
+.project-title .website-link {
+  position: relative;
+	margin-left: 75%;
+	font-size: 18px;
+  color: #e9c46a;
+  font-family: "Gugi", cursive;
+	font-weight: 600;
+	font-family: 'Buda', cursive;
+}
+
+
+.project-container .project-2 {
+  margin-left: 60px;
+}
+
+.project-3 .project-title .website-link {
+  top: -20px;
+}
+
+
+.project-4 .proj-screenshot {
+  height: 100%;
+  width: 100%;
+}
+
+.project-4 .proj-screenshot:hover {
+  height: 120%;
+  width: 120%;
+  transition: width 1s ease-in-out, height 1s ease-in-out;
+}
+
+.project-4 .project-title .website-link {
+  top: -20px;
+}
+
+.project-1 .website-link {
+	top: 10px;
+}
+
+.project-2 .website-link {
+	top: 10px;
+}
+
+.project-3 .website-link {
+	margin-top: 25px;
+}
+
+.project-4 .website-link {
+	margin-top: 40px;
+}
+
+.projects-sec .more, .projects-sec .less {
+  display: inline-block;
+  width: 140px;
+  height: 40px;
+  background-color: #1d3557;
+  border-color: #A3395B;
+  color: #FFFFFF;
+  font-family: "Gugi", cursive;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 20px 0 0 20px;
+  box-shadow: 4px 4px 4px #CFCFCF;
+  font-family: 'Merienda', cursive;
+}
+
+.projects-sec .more i, .projects-sec .less i {
+  padding: 0 0 0 5px;
+  font-size: 18px;
+}
+
+.projects-sec .toggle {
+  display: none;
+}
+
+/*style conatct section*/
+
+.contact {
+
+  background-color: #2E2630;
+  padding: 10px 0 20px 0;
+  background-image: url(../images/1509786.jpg);
+  background-size: 50%;
+
+}
+
+.contact .contact-div {
+  margin: 20px auto;
+  text-align: center;
+  border-style: solid;
+  border-color: #FFFFFF;
+  border-radius: 5px;
+  width: 600px;
+  height: 160px;
+  padding: 40px 0 20px 0;
+  box-shadow: 2px 3px #CFCFCF;
+ 
+}
+
+.contact .contact-div h2 {
+  font-size: 2vw;
+  font-family: "Gugi", cursive;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.contact .contact-div p {
+  font-size: 1.5rem;
+  padding-top: 2%;
+  font-family: 'Buda', cursive;
+  color: #ffffff;
+}
+
+.contact .contact-div p span {
+  color: red;
+  font-weight: 700;
+  font-size: 1.6rem;
+  font-family: 'Buda', cursive;
+  
+}
+
+.contact .contact-div .email {
+  color: #A3395B;
+  padding-bottom: 2%;
+  padding-top: 2.5%;
+  width: 255px;
+  margin: 0 auto;
+  border-bottom-color: #A3395B;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: 'Merienda', cursive;
+  
+}
+
+.contact .social {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact .social a {
+  color: #CFCFCF;
+  padding-left: 25px;
+}
+
+.contact .social i {
+	font-size: 25px;
+}
+
+.contact .social a:hover {
+  color: #A3395B;
+}
+
+footer {
+  background:#ffffff;
+  color: #2b2d42;
+  text-align: center;
+  padding: 5px 30px;
+}
+
+.resume {
+  display: block;
+  width: 100vw;
+  height: 12%;
+  background-image: url(../images/1464899.jpg);
+  background-size: 49%;
+  border-style: hidden;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 4px 4px 4px #CFCFCF;
+  padding: 1% 0% 0% 0%;
+  text-align: center;
+}
+
+.resume span {
+  font-family: 'Merienda', cursive;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.email a{
+  text-decoration: none;
+  color: #e9c46a;
+  font-size: 1.5rem;
+}
+
+a {
+  color: #e9c46a;/* set the text color to blue here */
+  text-decoration: none; /* This means we do not want hyperlinks to be underlined */
+}
+
+a:hover {
+   color:red;  /*colo set the text color to red here */
+  text-decoration: none; /* This means we do not want hyperlinks to be underlined */
+}
+
+
+/*style for mobile view on screen less than 500px*/
+
+
+@media only screen and (max-width: 500px) {
+
+	header .nav {
+		display: none;
+	}
+
+	.nav-icon, .mobile-navbar {
+		display: block;
+	}
+
+	.nav-icon i {
+		font-size: 40px;
+		color: white;
+		float: right;
+		margin: 10px;
+		cursor: pointer;
+
+	}
+
+	.menu {
+		position: absolute;
+		right: 5px;
+		top: 5px;
+		opacity: .9;
+		text-align: center;
+		list-style: none;
+		border-radius: 5px;
+		background-color: #2E2630;
+		z-index: 1;
+		height: 99vh;
+
+
+	}
+
+	.close i {
+		font-size: 40px;
+		text-align: right;
+		color: white;
+
+	}
+	.close {
+		position: absolute;
+		right: 1px;
+		top: 1px;
+		display: none;
+
+	}
+	.menu li:first-of-type {
+		margin-top: 200px;
+	}
+	.menu li {
+		margin: 40px;
+	}
+	.menu li a {
+		color: white;
+		text-decoration: none;
+		margin: 10px;
+		font-size: 30px;
+	}
+
+	.menu li a:hover {
+  	color: #A3395B;
+	}
+
+/*	class of menu openning*/
+	.opened {
+		width: 98%;
+		transition: width 1s ease-in-out;
+
+	}
+
+	.closed {
+		width: 0%;
+		transition: width 1s ease-in-out;
+	}
+
+	.welcome-part h1 {
+		font-size: 40px;
+	}
+
+	.welcome-part h1 span {
+		font-size: 30px;
+	}
+
+	.welcome-part p {
+		font-size: 25px;
+	}
+
+	.container .welcome-sec .contain {
+		left: 45%;
+	}
+
+	.container .welcome-sec .about {
+		width: 95%;
+	}
+
+	.container .welcome-sec .about h2 {
+		font-size: 25px;
+  }
+  
+ /* project section */
+
+	.container .proj-contain {
+		width: 95%;
+	}
+
+	.projects-sec .project-container {
+		flex-direction: column;
+		align-items: center;
+		flex-wrap: nowrap;
+	}
+
+	.project-container .project-2 {
+		margin-right: 60px;
+	}
+
+	.contact .contact-div {
+    margin-top: 2%;
+    padding-top: 12%;
+    padding-bottom:1% ;
+		width: 95%;
+	}
+
+	.contact .contact-div h2 {
+		font-size: 25px;
+	}
+
+	.contact .contact-div p {
+		font-size: 20px;
+  }
+  
+  .project-title {
+    background-color: #273344;
+    z-index: 3;
+    opacity: .8;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 15px 0 0 30px;
+    width: 100%;
+    height: 60%;
+    font-family: 'Buda', cursive;
+  }
+  
+  .project-title h6 {
+    display: inline-block;
+    font-size: 20px;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-family: 'Buda', cursive;
+  }
+  
+  .project-title p {
+    padding: 5px 50px 10px 0;
+    color: #FFFFFF;
+    font-family: 'Buda', cursive;
+  }
+  .project-title .links {
+    display: flex;
+    margin-top: -18px;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: 'Buda', cursive;
+  }
+  
+  .project-title .website-link {
+    position: relative;
+    margin-left: 50%;
+    font-size: 18px;
+    color: #e9c46a;
+    font-family: "Gugi", cursive;
+    font-weight: 600;
+    font-family: 'Buda', cursive;
+  }
+
+}
+
+
+
