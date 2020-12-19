@@ -2,6 +2,12 @@
   width: device-width;
 }
 
+@media print {
+  body {
+  display: none; /* this code will hide whole pages */
+  }
+  }
+
 /* Cascading stylesheet for the website */
 
 /* Text inside these asterisks and slashes are comments for human */
@@ -159,6 +165,11 @@
     font-size: 1.5rem;
   }
 
+  .down{
+    text-align: center;
+    margin-left: 4%;
+    }
+
   .down h2:hover{
     color:red;  /*colo set the text color to red here */
     text-decoration: none; /* This means we do not want hyperlinks to be underlined */
@@ -173,6 +184,7 @@
 
   .return {
     text-align: center;
+    margin-left: 4%;
   }
 
   .return h2 {
@@ -367,4 +379,15 @@
   .return h2:hover{
     color:#DA2C43;
   }
+
+  .down{
+    text-align: center;
+    margin-left: 4%;
+    }
+
+  .return {
+    text-align: center;
+    margin-left: 4%;
+  }
+
 }
