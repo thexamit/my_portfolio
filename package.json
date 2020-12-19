@@ -1,16 +1,24 @@
 {
-  "name": "my_resume",
+  "name": "my_portfolio",
   "version": "1.0.0",
   "description": "Capstone_project_coursera",
   "main": "index.html",
   "scripts": {
     "start": "npm run lite",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lite":"lite-server"
+    "lite": "lite-server"
   },
   "author": "Amit Kumar Verma",
   "license": "ISC",
   "devDependencies": {
     "lite-server": "^2.6.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thexamit/my_portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/thexamit/my_portfolio/issues"
+  },
+  "homepage": "https://github.com/thexamit/my_portfolio#readme"
 }
